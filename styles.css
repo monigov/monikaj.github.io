@@ -1987,3 +1987,41 @@ body {
   color: #00bcd4;
   text-decoration: none;
 }
+.about-content {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* fallback wrap */
+}
+
+.about-text {
+    flex: 1 1 300px; /* allows it to shrink and grow */
+    min-width: 280px;
+}
+
+.about-img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+
+    .about-description {
+        font-size: 1rem;
+        line-height: 1.6;
+        word-wrap: break-word; /* ensure long words break */
+    }
+}
